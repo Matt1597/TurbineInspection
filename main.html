@@ -1,0 +1,48 @@
+<!-- Author: Matthew Reilly -->
+<!DOCTYPE html>
+<html>
+
+<head>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <link rel="stylesheet" href="main.css">
+    <title>Turbine Inspection</title>
+
+    <script>
+        $(document).ready(function() {
+            $("button").click(function() {
+                hideButton();
+                $.ajax({
+                    url: "turbine.php",
+                    success: function(result) {
+                        $("#div1").html(result);
+                    }
+                });
+            });
+        });
+
+        function hideButton() {
+            var x = document.getElementById("hide");
+            if (x.style.display === "none") {
+                x.style.display = "block";
+            } else {
+                x.style.display = "none";
+            }
+        }
+    </script>
+
+</head>
+
+<body>
+
+    <h1>Turbine Inspection Results</h1>
+    <p></p>
+    <div id="div1">
+        <h2>Press Button to get Turbine Inspection Results</h2>
+    </div>
+
+    <button id="hide">Results</button>
+
+
+</body>
+
+</html>
