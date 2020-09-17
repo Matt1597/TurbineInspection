@@ -1,4 +1,4 @@
-# TurbineInspection
+# Turbine Inspection
 Link: http://54.202.239.71/main.php
 
 Hosted on Amazon Web Services and using XAMPP, coded in php, rendered with html and styled with css
